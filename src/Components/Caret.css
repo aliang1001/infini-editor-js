@@ -1,0 +1,12 @@
+.caret-blink {
+  animation: blinking-caret 1s infinite;
+}
+
+@keyframes blinking-caret {
+  0%, 49% {
+    background-color: rgba(117, 209, 63, 100);
+  }
+  50%, 100% {
+    background-color: rgba(117, 209, 63, 0);
+  }
+}
