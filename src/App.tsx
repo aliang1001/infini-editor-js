@@ -93,7 +93,6 @@ const App: React.FC = () => {
       if (!caret) {
         return
       }
-
       const block = resolved.source.list[caret.index] as Source.Paragraph
       const text = block.text.slice(0, range.start.offset) + block.text.slice(range.end.offset)
       const block_ = block.merge({ text })
@@ -110,7 +109,6 @@ const App: React.FC = () => {
   const noOp = React.useCallback(() => {}, [])
 
   const caretRect = caret && layout.caretRect(caret.index, caret.offset)
-
   return (
     <div>
       {<h1>{caret ? `当前的光标位置，第 ${caret.index + 1} 个段落，偏移量 ${caret.offset}。` : '未选中'}</h1>}
